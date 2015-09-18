@@ -28,7 +28,7 @@ function splitRows(input, options) {
 	var rowsep = escapeRegexChar(options.rowSeparator);
 
 	// Split by row separator
-	var row_exp = new RegExp("[" + junction + rowsep + "]+\n");
+	var row_exp = new RegExp("[" + junction + rowsep + "]{3,}\n");
 	var rows = input.split(row_exp);
 
 	if (!options.multiline) {
